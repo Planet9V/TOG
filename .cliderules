@@ -1,0 +1,8 @@
+# .cliderules - Core Rules for Clide AI Assistant
+
+For each prompt compose a summary along wiht the date and time of the activty and outcome into a log.md file. If the log.md file does not exist, create it.
+always refere to the step by step plan
+always consider risk to the code base before making changes
+preserve a well-structured folder structure for the project
+never use placeholders for content
+Do not truncate content

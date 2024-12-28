@@ -1,0 +1,54 @@
+.
+cliderules
+
+# .cliderules - Core Rules for Clide AI Assistant
+
+# Logging Rules
+logging:
+  enabled: true
+  log_file: "memlog/clide_activity.log"
+  summary_format: |
+    ---
+    Date/Time: {timestamp}
+    Activity Summary: {summary}
+    ---
+  create_if_not_exists: true
+
+# Risk Assessment Rules
+risk_assessment:
+  enabled: true
+  prioritize: "reliability"
+  assessment_criteria:
+    - "Code complexity"
+    - "Potential for bugs"
+    - "Impact on existing functionality"
+    - "Test coverage"
+  risk_levels:
+    low: "Minimal risk, proceed with caution."
+    medium: "Moderate risk, require thorough testing."
+    high: "Significant risk, require careful review and testing."
+
+# Codebase Preservation Rules
+codebase_preservation:
+  enabled: true
+  core_functions_priority: true
+  modular_fallback: true
+  modular_strategy: |
+    If a new feature or code change cannot be implemented without interfering with the main codebase, create a modular system that:
+      - Does not directly modify core functions.
+      - Uses separate files and folders.
+      - Communicates with the main codebase through well-defined interfaces.
+      - Can be easily disabled or removed without affecting the main system.
+
+# General Rules
+general:
+  always_reference: true # Always reference these rules on every prompt
+  dependency_management: |
+    - Always use the most stable versions of dependencies.
+    - Avoid disruptive updates.
+    - Document all dependencies.
+  communication_style: |
+    - Use clear and concise language.
+    - Ask clarifying questions when needed.
+    - Provide regular updates.
+    - Be polite and professional.
